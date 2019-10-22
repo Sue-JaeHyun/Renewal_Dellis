@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "554446897117",
+    "firebase_url": "https://renewal-delis.firebaseio.com",
+    "project_id": "renewal-delis",
+    "storage_bucket": "renewal-delis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554446897117:android:aa72e9077f8616b1b34034",
+        "android_client_info": {
+          "package_name": "com.example.renewal_dellis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554446897117-i99msh8smfdv4a2ivt9kdmrchu0mhio3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsPYY2QwgWh1M1Orif4U3c7XWt42Ygd7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "554446897117-i99msh8smfdv4a2ivt9kdmrchu0mhio3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
