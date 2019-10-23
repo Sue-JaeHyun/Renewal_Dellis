@@ -23,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private FirebaseFirestore db;
     TextView tvMessage;
+    TextView setTextView;
+    TextView nameTextView;
+    TextView backTextView;
+    TextView h_TextView;
+    TextView ls_TextView;
+    TextView anthena_long_TextView;
+    TextView anthena_long2_TextView;
+    TextView anthena_short_TextView;
+    TextView anthena_short2_TextView;
     EditText etNewMessage;
     Button btUpdate;
 
@@ -34,6 +43,16 @@ public class MainActivity extends AppCompatActivity {
         tvMessage = (TextView) findViewById(R.id.tv_message);
         etNewMessage = (EditText) findViewById(R.id.et_newData);
         btUpdate = (Button) findViewById(R.id.bt_update);
+        setTextView = (TextView) findViewById(R.id.set_textview);
+        nameTextView = (TextView) findViewById(R.id.name_textview);
+        backTextView = (TextView) findViewById(R.id.back_textview);
+        h_TextView = (TextView) findViewById(R.id.h_textview);
+        ls_TextView = (TextView) findViewById(R.id.ls_textview);
+        anthena_long_TextView = (TextView) findViewById(R.id.anthena_long_textview);
+        anthena_long2_TextView = (TextView) findViewById(R.id.anthena_long2_textview);
+        anthena_short_TextView = (TextView) findViewById(R.id.anthena_short_textview);
+        anthena_short2_TextView = (TextView) findViewById(R.id.anthena_short2_textview);
+
         db = FirebaseFirestore.getInstance();
 
         //버튼 이벤트
@@ -49,6 +68,16 @@ public class MainActivity extends AppCompatActivity {
                             Map<String,Object>result = documentSnapshot.getData();
 //                                Log.d("ABCDE",documentSnapshot.getData().get("name").toString());
                             tvMessage.setText(((Map<String,Object>)result.get("components")).get("anthena_short").toString());
+                            setTextView.setText(((Map<String,Object>)result.get("components")).get("set").toString());
+                            nameTextView.setText(documentSnapshot.getData().get("name").toString());
+                            backTextView.setText(((Map<String,Object>)result.get("components")).get("back").toString());
+                            h_TextView.setText(((Map<String,Object>)result.get("components")).get("h-920").toString());
+                            ls_TextView.setText(((Map<String,Object>)result.get("components")).get("ls-354").toString());
+                            anthena_long_TextView.setText(((Map<String,Object>)result.get("components")).get("anthena_long").toString());
+                            anthena_long2_TextView.setText(((Map<String,Object>)result.get("components")).get("anthena_long2").toString());
+                            anthena_short_TextView.setText(((Map<String,Object>)result.get("components")).get("anthena_short").toString());
+                            anthena_short2_TextView.setText(((Map<String,Object>)result.get("components")).get("anthena_short2").toString());
+
                         }
                     }
                 });
